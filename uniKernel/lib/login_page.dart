@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'sign_up_page.dart';
+import 'forgot_password_page.dart'; // Import the Forgot Password page
 
 class LoginPage extends StatefulWidget {
   @override
@@ -77,6 +78,19 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 style: TextStyle(color: Color(0xFF4E60FF)),
               ),
+              SizedBox(height: 10),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ForgotPasswordPage()),
+                  );
+                },
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(color: Color(0xFF4E60FF), fontWeight: FontWeight.bold),
+                ),
+              ),
               SizedBox(height: 40),
               Container(
                 width: double.infinity,
@@ -92,10 +106,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: ElevatedButton(
                   onPressed: () {
                     // Handle login
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUpPage()),
-                      );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUpPage()),
+                    );
                   },
                   child: Text(
                     'Login',

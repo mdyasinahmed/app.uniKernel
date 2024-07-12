@@ -11,7 +11,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 15), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => LoginPage()),
       );
@@ -25,7 +25,7 @@ class _WelcomePageState extends State<WelcomePage> {
         color: Colors.white,
         child: Column(
           children: [
-            Spacer(flex: 3),
+            Spacer(flex: 2),
             Align(
               alignment: Alignment.center,
               child: SizedBox(
@@ -34,13 +34,27 @@ class _WelcomePageState extends State<WelcomePage> {
                 child: Image.asset('assets/logo.png'),
               ),
             ),
-            Spacer(flex: 2),
+            Spacer(flex: 3),
             Padding(
               padding: const EdgeInsets.only(bottom: 20.0),
-              child: Text(
-                'Powered By\nCoderGeek\n©2024 uniKernel',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.grey),
+              child: Column(
+                children: [
+                  Text(
+                    'Powered By',
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                  SizedBox(height: 10),
+                  SizedBox(
+                    width: 100,
+                    height: 50,
+                    child: Image.asset('assets/organisation_logo.png'), // Placeholder for the organization logo
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    '©2024 uniKernel',
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
               ),
             ),
           ],
