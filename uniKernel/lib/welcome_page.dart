@@ -11,7 +11,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 15), () {
+    Timer(Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => LoginPage()),
       );
@@ -46,8 +46,8 @@ class _WelcomePageState extends State<WelcomePage> {
                   SizedBox(height: 10),
                   SizedBox(
                     width: 100,
-                    height: 50,
-                    child: Image.asset('assets/organisation_logo.png'), // Placeholder for the organization logo
+                    height: 80,
+                    child: Image.asset('assets/becoder.png'),
                   ),
                   SizedBox(height: 10),
                   Text(
