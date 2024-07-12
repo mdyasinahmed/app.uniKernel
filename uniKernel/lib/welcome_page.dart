@@ -40,10 +40,10 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Column(
                 children: [
                   Text(
-                    'Powered By',
-                    style: TextStyle(color: Colors.grey),
+                    'POWERED BY',
+                    style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   SizedBox(
                     width: 100,
                     height: 80,

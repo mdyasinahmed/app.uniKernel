@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unikernel/password_reset_page.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   @override
@@ -88,6 +89,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                         SnackBar(content: Text('Please enter your email address')),
                       );
                     }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PasswordResetPage()),
+                    );
                   },
                   child: Text(
                     'Send Reset Link',

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'schedule_selection_page.dart';
+import 'pages/schedule_selection_page.dart';
 
 class UniversityIdPage extends StatelessWidget {
   @override
